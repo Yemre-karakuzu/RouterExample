@@ -20,6 +20,9 @@
       return{
         navigationLink:{name:'userEdit',params:{id:this.$route.params.id},query:{name:'Yunus Emre',lastname:'Karakuzu' },hash:"#data"}
       }
+    },
+    beforeRouteEnter(to,from,next){
+      next()
     }
   }
 </script>

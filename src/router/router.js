@@ -17,7 +17,9 @@ export const routes=[
     },
         children:[
             {path :'',component:UserStart},// /user
-            {path :':id',component:UserDetail}, // /user/12
+            {path :':id',component:UserDetail,beforeEnter:(to,from,next)=>{
+                next();
+            }}, // /user/12
             {path :':id/edit',component:UserEdit,name:"userEdit"} // /user/12/edit          
         ]
     },
