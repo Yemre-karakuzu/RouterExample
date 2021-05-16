@@ -13,7 +13,7 @@ export const routes=[
     }},
     {path:'/user',name:"user",components:{
         default:User,
-        "header-bottom":Header
+        "header-top":Header
     },
         children:[
             {path :'',component:UserStart},// /user
