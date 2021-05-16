@@ -3,10 +3,18 @@
     <h3>User Start Component</h3>
     <hr>
     <ul class="list-group">
-      <li class="list-group-item">User 1</li>
-      <li class="list-group-item">User 2</li>
-      <li class="list-group-item">User 3</li>
-      <li class="list-group-item">User 4</li>
+      <router-link tag="li" class="list-group-item" to="/user/1" exact active-class="active">
+        <a>User 1</a>
+    </router-link>
+      <router-link tag="li" class="list-group-item" to="/user/2" exact active-class="active">
+        <a>User 2</a>
+    </router-link>
+      <router-link tag="li" class="list-group-item" to="/user/3" exact active-class="active">
+        <a>User 3</a>
+    </router-link>
+      <router-link tag="li" class="list-group-item" to="/user/4" exact active-class="active">
+        <a>User 4</a>
+    </router-link>
     </ul>
   </div>
 </template>
