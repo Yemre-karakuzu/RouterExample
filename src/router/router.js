@@ -11,7 +11,7 @@ export const routes=[
         children:[
             {path :'',component:UserStart},// /user
             {path :':id',component:UserDetail}, // /user/12
-            {path :':id/edit',component:UserEdit} // /user/12/edit
+            {path :':id/edit',component:UserEdit,name:"userEdit"} // /user/12/edit
 
             
         ]
