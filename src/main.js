@@ -6,7 +6,15 @@ import {routes} from "./router/router"
 Vue.use(VueRouter)
 
 const router =new VueRouter({
-  routes
+  routes,
+  mode:"history",//hash:default
+  scrollBehavior(to){
+    if(to.hash){
+      return{
+        selector:to.hash
+      }
+    }
+  }
 });
 
 new Vue({

@@ -8,6 +8,9 @@
     <p>
       Soyad:{{$route.query.lastname}}
     </p>
+    <div style="height:800px;"></div>
+      <p id="data">Hash Fragment Scroll behavior </p>
+    
   </div>
 </template>
 <script>

@@ -6,7 +6,7 @@
     <router-link
     tag="button"
     class="btn btn-primary"
-    :to="{name:'userEdit',params:{id:$route.params.id},query:{name:'Yunus Emre',lastname:'Karakuzu' }}"
+    :to="navigationLink"
     >
     <!-- :to="'/user/'+$route.params.id+'/edit'" -->
     <!-- BU ŞEKİLDE DE TANIMLANABİLİR -->
@@ -15,5 +15,11 @@
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+    data(){
+      return{
+        navigationLink:{name:'userEdit',params:{id:this.$route.params.id},query:{name:'Yunus Emre',lastname:'Karakuzu' },hash:"#data"}
+      }
+    }
+  }
 </script>
