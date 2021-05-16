@@ -8,11 +8,31 @@
     <p>
       Soyad:{{$route.query.lastname}}
     </p>
+    <button class="btn btn-primary" @click="saved=true">Onayla</button>
     <div style="height:800px;"></div>
       <p id="data">Hash Fragment Scroll behavior </p>
     
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+    data(){
+      return{
+      saved:false,
+      }
+    },
+    beforeRouteLeave(to,from,next){
+      if(this.saved)
+      {
+        next()
+      }
+      else{
+        if(confirm("Tüm bilgileriniz kaybolacak.Emin misiniz?")){
+          next()
+        }else{
+          next(false)
+        }
+      }
+    }
+  }
 </script>
