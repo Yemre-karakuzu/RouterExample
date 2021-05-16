@@ -4,6 +4,7 @@
     <!-- children route varsa router-view kullanılması gerekir. -->
     <hr>
     <button class="btn btn-success"  @click="navigateToHome">Home Component</button>
+  <hr>
   </div>
 </template>
 <script>

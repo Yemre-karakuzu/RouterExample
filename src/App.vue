@@ -3,20 +3,21 @@
   <div class="row">
     <div class="col-md-12">
       <br>
-      <Header></Header>
       <hr>
+      <router-view name="header-top"></router-view>
       <router-view></router-view>
+      <router-view name="header-bottom"></router-view>
     </div>
   </div>
 </div>
 </template>
 
 <script>
-import Header from "./components/Header"
+// import Header from "./components/Header"
 export default {
-  components:{
-    Header,
-  }
+  // components:{
+  //   Header,
+  // }
 }
 </script>
 
