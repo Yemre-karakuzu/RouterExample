@@ -1,38 +1,25 @@
 <template>
-  <div id="app">
-  <h1>Hello App!</h1>
-  <p>
-    <router-link to="/foo">Go to Foo</router-link>
-    <router-link to="/bar">Go to Bar</router-link>
-  </p>
-  <router-view></router-view>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <Header></Header>
+      <hr>
+      <router-view></router-view>
+    </div>
+  </div>
 </div>
 </template>
 
 <script>
+import Header from "./components/Header"
 export default {
-  name: 'App',
-  computed: {
-    username() {
-      return this.$route.params.username
-    }
-  },
-  methods: {
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-    }
+  components:{
+    Header,
   }
 }
 </script>
 
 <style>
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
