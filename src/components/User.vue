@@ -7,8 +7,18 @@
       soluta? Animi, atque blanditiis commodi consequatur distinctio dolorem eaque eos expedita, modi reprehenderit
       repudiandae soluta.
     </p>
+    <hr>
+    <button class="btn btn-seccess"  @click="navigateToHome">Home Component</button>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+    methods:{
+      navigateToHome(){
+        this.$router.push("/") // 1.yol  sadece path verilir. 
+        // this.$router.push({path:"/"}) // 2. yol obje nin içinde path verilir.
+        this.$router.push()
+      }
+    }
+  }
 </script>
